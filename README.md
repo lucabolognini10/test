@@ -17,3 +17,4 @@ https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generati
 ho salvato chiave in utenti lucabolognini/ssh
 segui procedura inidcate nella pagina di github
 dopo aver creato cartella ssh, produci chiave pubblica  cd .ssh, ls, cat, e aggiungi chiave al tuo account git hub in settings
+a
