@@ -14,3 +14,6 @@ bash verràusato per costruire outline (input e utput) obiettivo è modificare i
 invia report git hub per esame (in genome papaer allega link git hub)
 creare SSH key, non usare ctrl+c ma usa ctrl+shift+c (se no blocca processi) usare stessa mail account git hub ssh-keygen -t ed25519 -C "your_email@example.com"
 https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=linux
+ho salvato chiave in utenti lucabolognini/ssh
+segui procedura inidcate nella pagina di github
+dopo aver creato cartella ssh, produci chiave pubblica  cd .ssh, ls, cat, 
