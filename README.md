@@ -1,5 +1,5 @@
 # test
-descscarica git ewindows e visual code
+scarica git ewindows e visual code
 open git usando clicca su desktop (spazio è informativo in bioinf)
 ls (list) comando per lista oggetti
 mkdir (make directory) sia posizionale (nome doposcritto dopo sarà nome cartella)
