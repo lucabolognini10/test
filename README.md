@@ -12,3 +12,5 @@ evitare simbolo tilde, indica home, slash indica path
 file read me in git hub (questo) è il file che indica cosa c'è dentro, in quello del dottorando c'è lista https://github.com/MirkMart/Lab_CompGeno
 bash verràusato per costruire outline (input e utput) obiettivo è modificare input per essere leggibili, non faccimao programma
 invia report git hub per esame (in genome papaer allega link git hub)
+creare SSH key, non usare ctrl+c ma usa ctrl+shift+c (se no blocca processi) usare stessa mail account git hub ssh-keygen -t ed25519 -C "your_email@example.com"
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=linux
