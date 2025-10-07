@@ -25,4 +25,7 @@ creare nuova chiave ssh (nuova macchina a cui siamo collegati)
 
 seleaziona directory (cd) test/
 git status
-
+ct README.md (legge file)
+touch test1/test2/test3/README.md
+../i (indietro)
+nano apre modifica file
