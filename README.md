@@ -25,4 +25,4 @@ creare nuova chiave ssh (nuova macchina a cui siamo collegati)
 
 seleaziona directory (cd) test/
 git status
-f
+
