@@ -23,3 +23,5 @@ usa "" per aprire nomi con spazi
 entra in sangiacomobigea, nuovo desktop, crea sessione personalizzzta, esegui console,
 creare nuova chiave ssh (nuova macchina a cui siamo collegati)
 
+seleaziona directory (cd) test/
+git status
