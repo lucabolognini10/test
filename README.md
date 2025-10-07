@@ -18,3 +18,8 @@ ho salvato chiave in utenti lucabolognini/ssh
 segui procedura inidcate nella pagina di github
 dopo aver creato cartella ssh, produci chiave pubblica  cd .ssh, ls, cat, e aggiungi chiave al tuo account git hub in settings
 usa "" per aprire nomi con spazi
+
+(2025 bash) nomachine per collegarsi 
+entra in sangiacomobigea, nuovo desktop, crea sessione personalizzzta, esegui console,
+creare nuova chiave ssh (nuova macchina a cui siamo collegati)
+
