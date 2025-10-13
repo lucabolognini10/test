@@ -25,9 +25,12 @@ git clone git@github.com:lucabolognini10/test.git
 cd test/
 mkdir 00 e 02
 
-saimo in 02, ricerca reads e creazione link
+saimo in cartrella 02, ricerca reads e creazione link
 ln -s /home/PERSONALE/mirko.martini3/Lab_CompGeno/00_practice/00_data/00_reads/SRR11672503_1.fastq.gz .
-ln -s /home/PERSONALE/mirko.martini3/Lab_CompGeno/00_practice/00_data/00_reads/SRR11672503_2.fastq.gz . (creo link, . inidca qui)
+ln -s /home/PERSONALE/mirko.martini3/Lab_CompGeno/00_practice/00_data/00_reads/SRR11672503_2.fastq.gz . #creo link, . inidca qui
 ll (link path)
 conda activate
-conda activate assembly
+conda activate assembly #ingresso enviroment assembly
+```bash
+#assembly
+fastqc SRR11672503_1.fastq.gz SRR11672503_2.fastq.gz #controllo qualità reads
