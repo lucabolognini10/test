@@ -17,3 +17,6 @@ nano .bashrc (apre impostazionibash)
 
 alias didattica="ssh STUDENTI^luca.bolognini5@137.204.142.242" (didattica divemnta ssh)
 didattica (psw non visibili quando scrivi)
+
+crea nuova key ssh per workstation unibo in cui lavori
+cat .ssh/id_ed25519.pub
