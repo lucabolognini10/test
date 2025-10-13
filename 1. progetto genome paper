@@ -21,3 +21,13 @@ didattica (psw non visibili quando scrivi)
 crea nuova key ssh per workstation unibo in cui lavori
 cat .ssh/id_ed25519.pub
 creo key chimata didattica didatticaserver (ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJOiwQFfB69Vmh5Re4+m90QdqOcIf70ML7XjhvfiBh1P lucabolo10@gmail.com)
+git clone git@github.com:lucabolognini10/test.git
+cd test/
+mkdir 00 e 02
+
+saimo in 02, ricerca reads e creazione link
+ln -s /home/PERSONALE/mirko.martini3/Lab_CompGeno/00_practice/00_data/00_reads/SRR11672503_1.fastq.gz .
+ln -s /home/PERSONALE/mirko.martini3/Lab_CompGeno/00_practice/00_data/00_reads/SRR11672503_2.fastq.gz . (creo link, . inidca qui)
+ll (link path)
+conda activate
+conda activate assembly
