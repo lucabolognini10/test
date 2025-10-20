@@ -47,5 +47,6 @@ trimmomatic PE -threads 8 -phred33 SRR11672503_1.fastq.gz SRR11672503_2.fastq.gz
 conda activate kat
 kat hist -t 8 -m 27 -o Anoste SRR11672503_1_paired.fastq SRR11672503_2_paired.fastq
 
-
-
+ git config --global user.email "lucabolo10@gmail.com"
+git add SRR11672503_1_fastqc.html
+git add SRR11672503_2_fastqc.html
