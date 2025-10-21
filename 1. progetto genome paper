@@ -64,5 +64,5 @@ conda activate assembly
 tmux ls # lista screen, screen mantengono attivi proceessi, lavora sempre nello stesso luogo fisico
 tmux a -t general #entro in screen, di seguito entro in 03/00 e attivo assembly
 ln -s /home/PERSONALE/mirko.martini3/Lab_CompGeno/00_practice/00_data/00_reads/SRR11672506.fastq.gz #recupero tramkite link
-
-
+wtdbg2 -x rs -g <EXPECTED_GENOMESIZE> -t <NUMBERS_OF_CORES> -i <FASTQ> -fo <OUT_PREFIX> #Default parameters cerca quelli usati
+wtpoa-cns -t 7 -i Anoste_raw.ctg.lay.cz -fo Anoste_raw
