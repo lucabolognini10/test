@@ -47,6 +47,22 @@ trimmomatic PE -threads 8 -phred33 SRR11672503_1.fastq.gz SRR11672503_2.fastq.gz
 conda activate kat
 kat hist -t 8 -m 27 -o Anoste SRR11672503_1_paired.fastq SRR11672503_2_paired.fastq
 
- git config --global user.email "lucabolo10@gmail.com"
+git config --global user.email "lucabolo10@gmail.com"
 git add SRR11672503_1_fastqc.html
 git add SRR11672503_2_fastqc.html
+git add Anoste.hist Anoste.png
+git commit -m "genome survey" #creates a new a commit 
+git pull --rebase #pull any changes from online repositories
+git push #push any new commit
+
+03
+mkdir 03_genomeassembly
+cd 03_genomeassembly/
+mkdir 00_row #dentro 03, inoltre ci entro
+cd 00_row/
+conda activate assembly
+tmux ls # lista screen, screen mantengono attivi proceessi, lavora sempre nello stesso luogo fisico
+tmux a -t general #entro in screen, di seguito entro in 03/00 e attivo assembly
+ln -s /home/PERSONALE/mirko.martini3/Lab_CompGeno/00_practice/00_data/00_reads/SRR11672506.fastq.gz #recupero tramkite link
+
+
