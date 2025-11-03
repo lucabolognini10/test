@@ -77,4 +77,13 @@ ctrl+a, c
 export NUMEXPR_MAX_THREADS=80          
 less -S Anoste_raw.fasta #vedere se una linea o piu busco dont like one line
 busco --help | less #helper
-torno in 1: busco -m geno -l $BUSCO/culicidae_odb12 -c 6 -o Anoste_raw.busco -i Anoste_raw.fasta
+torno in 1: busco -m geno -l $BUSCO/culicidae_odb12 -c 6 -o Anoste_raw.busco -i Anoste_raw.fasta #faccio correre busco
+
+#trasformare sam file in bam file binario meno pesante
+nano mapping.sh # ora siamo in screen 2
+bash mapping.sh #faccio correre lo script che ho scritto
+
+#screen 3
+ln -s /home/PERSONALE/mirko.martini3/Lab_CompGeno/00_practice/02_KmerBased_GenomeSurvey/SRR11672503_1_paired.fastq
+ln -s /home/PERSONALE/mirko.martini3/Lab_CompGeno/00_practice/02_KmerBased_GenomeSurvey/SRR11672503_2_paired.fastq #nuovi link da inserire in scrren 2
+
