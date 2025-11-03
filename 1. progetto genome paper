@@ -64,5 +64,17 @@ conda activate assembly
 tmux ls # lista screen, screen mantengono attivi proceessi, lavora sempre nello stesso luogo fisico
 tmux a -t general #entro in screen, di seguito entro in 03/00 e attivo assembly
 ln -s /home/PERSONALE/mirko.martini3/Lab_CompGeno/00_practice/00_data/00_reads/SRR11672506.fastq.gz #recupero tramkite link
-wtdbg2 -x rs -g <EXPECTED_GENOMESIZE> -t <NUMBERS_OF_CORES> -i <FASTQ> -fo <OUT_PREFIX> #Default parameters cerca quelli usati
+wtdbg2 -x rs -g <EXPECTED_GENOMESIZE> -t <NUMBERS_OF_CORES> -i <FASTQ> -fo <OUT_PREFIX> #Default parameters cerca quelli usati  wtdbg2 -x rs -g 227054799 -t 8 -i SRR11672506.fastq.gz -fo Anoste_raw
 wtpoa-cns -t 7 -i Anoste_raw.ctg.lay.cz -fo Anoste_raw
+
+head Anoste raw #vede header
+mv Anoste_raw Anoste_raw.fasta
+assembly-stats Anoste_raw.fasta > Anoste_raw.stats #n50 lunhgezza 5 che contengono ppiu 50% basi totali, è inidcato il piu piccolo tra questi 5. n50 è una metrca un po manipolabile. N count indica nucleotidi non conosciuti, n50, parametro di contiguità
+cat # caratteristiche
+conda activate sequence
+ctrl+a, c
+
+export NUMEXPR_MAX_THREADS=80          
+less -S Anoste_raw.fasta #vedere se una linea o piu busco dont like one line
+busco --help | less #helper
+torno in 1: busco -m geno -l $BUSCO/culicidae_odb12 -c 6 -o Anoste_raw.busco -i Anoste_raw.fasta
