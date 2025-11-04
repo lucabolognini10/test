@@ -55,7 +55,7 @@ git commit -m "genome survey" #creates a new a commit
 git pull --rebase #pull any changes from online repositories
 git push #push any new commit
 
-03
+03_genome_assembly
 mkdir 03_genomeassembly
 cd 03_genomeassembly/
 mkdir 00_row #dentro 03, inoltre ci entro
@@ -76,7 +76,7 @@ ctrl+a, c
 
 export NUMEXPR_MAX_THREADS=80          
 less -S Anoste_raw.fasta #vedere se una linea o piu busco dont like one line
-busco --help | less #helper
+busco --help | less #helper, q per uscire
 torno in 1: busco -m geno -l $BUSCO/culicidae_odb12 -c 6 -o Anoste_raw.busco -i Anoste_raw.fasta #faccio correre busco
 
 #trasformare sam file in bam file binario meno pesante
@@ -87,3 +87,9 @@ bash mapping.sh #faccio correre lo script che ho scritto
 ln -s /home/PERSONALE/mirko.martini3/Lab_CompGeno/00_practice/02_KmerBased_GenomeSurvey/SRR11672503_1_paired.fastq
 ln -s /home/PERSONALE/mirko.martini3/Lab_CompGeno/00_practice/02_KmerBased_GenomeSurvey/SRR11672503_2_paired.fastq #nuovi link da inserire in scrren 2
 
+#new day POLISHING 01_polishing
+
+mv Anoste_raw_lr* ../01_polishing/ #creo nuova cartella 01_polishing e qui vis sposto lr e sr
+mv Anoste_raw_sr* ../01_polishing/
+mosdepth -n --fast-mode --by 500 Anoste_raw_sr Anoste_raw_sr_sorted.bam
+# calcolo coverage media sommando e divindendo per il numero di coverage
