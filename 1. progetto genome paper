@@ -117,3 +117,4 @@ minimap2 --secondary=no --MD -ax sr -t 8 Anoste_pol.fasta SRR11672503_1_paired.f
 samtools sort -@8 -o Anoste_pol_sr_sorted.bam Anoste_pol_sr.bam
 samtools index Anoste_pol_sr_sorted.bam
 rm Anoste_pol_sr.bam #in nano
+bash mapping2.sh
