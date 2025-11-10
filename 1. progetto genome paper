@@ -77,6 +77,7 @@ ctrl+a, c
 export NUMEXPR_MAX_THREADS=80          
 less -S Anoste_raw.fasta #vedere se una linea o piu busco dont like one line
 busco --help | less #helper, q per uscire
+fold -w <n_characters> <input.fasta> > <output.fasta> #crea multiline
 torno in 1: busco -m geno -l $BUSCO/culicidae_odb12 -c 6 -o Anoste_raw.busco -i Anoste_raw.fasta #faccio correre busco
 
 #trasformare sam file in bam file binario meno pesante
@@ -98,3 +99,13 @@ R1=/home/PERSONALE/mirko.martini3/Lab_CompGeno/00_practice/02_KmerBased_GenomeSu
 R2=/home/PERSONALE/mirko.martini3/Lab_CompGeno/00_practice/02_KmerBased_GenomeSurvey/SRR11672503_2_paired.fastq
 echo -e "$R1\n$R2" > Sr.path
 hypo -d Anoste_raw.fasta -r @Sr.path -s 227054799 -c 136 -b Anoste_raw_sr_sorted.bam -B Anoste_raw_lr_sorted.bam -t 6
+
+new day cartel 01polish
+mv hypo_Anoste_raw.fasta Anoste_pol.fasta #rinomina file
+ln -s /home/PERSONALE/mirko.martini3/Lab_CompGeno/00_practice/02_KmerBased_GenomeSurvey/SRR11672503_1_paired.fastq
+ln -s /home/PERSONALE/mirko.martini3/Lab_CompGeno/00_practice/02_KmerBased_GenomeSurvey/SRR11672503_2_paired.fastq #scarico link in 01
+#esegui busco verso diptera, controllosia mutliline
+busco -m geno -l $BUSCO/culicidae_odb12 -c 6 -o Anoste_pol.busco -i Anoste_pol.fasta #faccio correre busco
+kat comp -t 8 -o Anoste_pol 'SRR11672503_1_paired.fastq SRR11672503_2_paired.fastq' Anoste_pol.fasta
+
+#decontaminzaione reads
